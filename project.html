@@ -1,0 +1,499 @@
+<?php
+  include './connect/session.php';
+  include './connect/connect.php';
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정승호 PORTFOLIO</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style4.css" />
+    <link rel="stylesheet" href="css/project.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="scroll">0</div>
+    <!-- //scroll -->
+
+    <div id="loader" class="loader_active">
+      <div class="container">
+        <div class="scene">
+          <div class="cubes1">
+            <div class="cube1">
+              <div class="face face--front">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--back">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--left">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--right">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--top">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--bottom">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //loader -->
+    <!-- header -->
+    <?php
+      include './component/header.php';
+    ?>
+    <!-- //header -->
+
+    <div
+      class="view_page_btn_wrap"
+      data-9999="display:none"
+      data-10000="display:flex;opacity:0"
+      data-10400="opacity:1"
+    >
+      <div class="next_btn">
+        <p>
+          <span>SCRIPT</span>
+        </p>
+        <span class="icon-right"></span><span class="icon-right after"></span>
+      </div>
+    </div>
+
+    <!-- //view page btn -->
+
+    <div id="section1">
+      <div
+        class="bg"
+        data-0="opacity:0"
+        data-1000="opacity:1"
+        data-2400="opacity:1"
+        data-3400="opacity:0.8"
+        data-4400="opacity:0.8"
+        data-5400="opacity:0.5"
+        data-6400="opacity:0.5"
+        data-7400="opacity:0.3"
+      >
+        <canvas id="canv"></canvas>
+      </div>
+      <div class="line_wrap">
+        <div class="container">
+          <div class="col_wrap">
+            <span data-0="height: 0vh" data-1400="height: 100vh"></span>
+            <span
+              data-100="height: 0vh"
+              data-1400="height: 100vh; width: 1px; opacity:1;"
+              data-2400="height: 100vh; width: 100px; opacity:0;"
+            >
+            </span>
+            <span
+              data-200="height: 0vh"
+              data-1400="height: 100vh; width: 1px; opacity:1;"
+              data-2400="height: 100vh; width: 100px; opacity:0;"
+            ></span>
+            <span data-400="height: 0vh" data-1400="height: 100vh"></span>
+            <span
+              data-500="height: 0vh"
+              data-1400="height: 100vh"
+              data-3400="height: 100vh; width: 1px; opacity:1;"
+              data-4400="height: 100vh; width: 100px; opacity:0;"
+            ></span>
+            <span
+              data-500="height: 0vh"
+              data-1400="height: 100vh"
+              data-3400="height: 100vh; width: 1px; opacity:1;"
+              data-4400="height: 100vh; width: 100px; opacity:0;"
+            ></span>
+            <span data-800="height: 0vh" data-1400="height: 100vh"></span>
+            <span
+              data-500="height: 0vh"
+              data-1400="height: 100vh"
+              data-5400="height: 100vh; width: 1px; opacity:1;"
+              data-6400="height: 100vh; width: 100px; opacity:0;"
+            ></span>
+            <span
+              data-1000="height: 0vh"
+              data-1400="height: 100vh"
+              data-5400="height: 100vh; width: 1px; opacity:1;"
+              data-6400="height: 100vh; width: 100px; opacity:0;"
+            ></span>
+            <span data-800="height: 0vh" data-1400="height: 100vh"></span>
+            <span
+              data-1000="height: 0vh"
+              data-1400="height: 100vh"
+              data-7400="height: 100vh; width: 1px; opacity:1;"
+              data-8400="height: 100vh; width: 100px; opacity:0;"
+            ></span>
+            <span
+              data-1100="height: 0vh"
+              data-1400="height: 100vh"
+              data-7400="height: 100vh; width: 1px; opacity:1;"
+              data-8400="height: 100vh; width: 100px; opacity:0;"
+            ></span>
+            <span data-1200="height: 0vh" data-1400="height: 100vh"></span>
+          </div>
+        </div>
+      </div>
+      <div class="contents_wrap">
+        <div class="container">
+          <div class="content01" data-2400="height:0px" data-3400="height:1000px">
+            <div class="cont_tit">
+              <p>WEB STANDARD</p>
+            </div>
+            <div class="cont_img">
+              <img src="./img/web_standard_mok.png" alt="웹 표준 페이지" />
+            </div>
+            <div class="cont_btn_wrap">
+              <div class="cont_btn">
+                <a href="http://dkdl1566.dothome.co.kr/web_standard/" target="_blank"> VIEW </a>
+              </div>
+            </div>
+          </div>
+          <div class="content02" data-4400="height:0px" data-5400="height:1000px">
+            <div class="cont_tit">
+              <p>MEGABOX</p>
+            </div>
+            <div class="cont_img">
+              <img src="./img/megabox_mok.png" alt="메가박스 사이트" />
+            </div>
+            <div class="cont_btn_wrap">
+              <div class="cont_btn">
+                <a href="http://dkdl1566.dothome.co.kr/megabox/" target="_blank"> VIEW </a>
+              </div>
+            </div>
+          </div>
+          <div class="content03" data-6400="height:0px" data-7400="height:1000px">
+            <div class="cont_tit">
+              <p>INDIGO</p>
+            </div>
+            <div class="cont_img">
+              <img src="./img/indigo_mok.png" alt="인디고 사이트" />
+            </div>
+            <div class="cont_btn_wrap">
+              <div class="cont_btn">
+                <a href="http://dkdl1566.dothome.co.kr/indigo/" target="_blank"> VIEW </a>
+              </div>
+            </div>
+          </div>
+          <div class="content04" data-8400="height:0px" data-9400="height:1000px">
+            <div class="cont_tit">
+              <p>HOLLYS</p>
+            </div>
+            <div class="cont_img">
+              <img src="./img/hollys_mok.png" alt="할리스커피 사이트" />
+            </div>
+            <div class="cont_btn_wrap">
+              <div class="cont_btn">
+                <a href="http://dkdl1566.dothome.co.kr/hollys/" target="_blank"> VIEW </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer hide">
+      <h2>
+        <p>
+          <span>PORTFOLIO</span>
+        </p>
+      </h2>
+      <div class="bottom_text_wrap">
+        <div class="page_num">
+          <div class="page_icon_sec">
+            <div class="page_icon"></div>
+            <div class="page_icon_num">
+              <p>
+                <span>02</span>
+              </p>
+            </div>
+          </div>
+          <div class="bottom_text_info">
+            <p>Welcome my portfolio site If you scroll down, you can see a lot of content</p>
+          </div>
+          <div class="right_page_text">
+            <div class="right_page">
+              <div class="top_right">
+                <p>
+                  <span>02</span>
+                </p>
+              </div>
+              <div class="bottom_right">
+                <p>
+                  <span>05</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page_nav">
+        <div class="page_nav_btns">
+          <div class="next_btns">
+            <p>
+              <span>MAIN</span>
+            </p>
+            <p><span>PROJECT</span></p>
+            <p><span>SCRIPT</span></p>
+            <p><span>CSS</span></p>
+            <p><span>CONTACT</span></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.0/gsap.min.js"></script>
+    <script>
+      $(function () {
+        setTimeout(() => {
+          $('#loader').removeClass('loader_active');
+          $('.header,.footer,.cube_sec,.next_btn').removeClass('hide');
+        }, 100);
+      });
+      var scrTop = $(window).scrollTop();
+      $(window).scroll(function () {
+        let scroll = $(window).scrollTop();
+        $('.scroll').text(parseInt(scroll));
+      });
+      var s = skrollr.init();
+      $('.next_btn').on('click', function () {
+        var offset = $(document).height();
+        $('html').animate({ scrollTop: offset }, 1200);
+      });
+      // $(".gel, .hex-brick").addClass("active");
+      // page 넘어가기 script
+      function pageClick() {
+        var elem = $('.next_btn p span').text();
+        document.querySelectorAll('.next_btn,.next_btns p span').forEach(elem => {
+          elem.addEventListener('click', e => {
+            e.preventDefault();
+            const hrefName = elem.innerText.toLowerCase();
+            //alert(hrefName);
+            // document.getElementById('loader').style.visibility = 'visible';
+            document.getElementById('loader').classList.add('loader_active');
+
+            $('.header,.footer,.cube_sec,.view_page_btn_wrap').addClass('hide');
+            setTimeout(() => {
+              document.getElementById('loader').classList.add('loader_active');
+              window.location.href =
+                'http://dkdl1566.dothome.co.kr/PortFolio/' + hrefName + '.html';
+            }, 1800);
+          });
+        });
+      }
+      pageClick();
+      // 하단 메뉴
+
+      // loader
+      select = e => document.querySelector(e);
+      selectAll = e => document.querySelectorAll(e);
+
+      let getDocProp = gsap.getProperty(':root'),
+        midCol = getDocProp('--mid-color'),
+        outCol = getDocProp('--out-color'),
+        faceDuration = 0.5,
+        staggerOffset = 0.1,
+        easing = 'sine.inOut',
+        gtl = gsap.timeline({ repeat: -1, delay: 0.5 });
+
+      gsap.set('.container', { autoAlpha: 1 });
+
+      function facesIn() {
+        let tl = gsap
+          .timeline({
+            defaults: {
+              scaleY: 1,
+              opacity: 0.9,
+              backgroundColor: midCol,
+              transformOrigin: 'center bottom',
+              duration: faceDuration,
+              ease: easing,
+              stagger: {
+                each: staggerOffset
+              }
+            }
+          })
+          .to('.face--back .face__panel', {})
+          .to('.face--right .face__panel', {}, 0)
+          .to('.face--bottom .face__panel', {}, 0)
+          .to('.face--top .face__panel', {}, 0.3)
+          .to('.face--left .face__panel', {}, 0.3)
+          .to('.face--front .face__panel', {}, 0.3);
+
+        return tl;
+      }
+
+      function facesOut() {
+        let tl = gsap
+          .timeline({
+            defaults: {
+              scaleY: 0,
+              opacity: 0,
+              backgroundColor: outCol,
+              transformOrigin: 'center top',
+              duration: faceDuration,
+              ease: easing,
+              stagger: {
+                each: staggerOffset
+              }
+            }
+          })
+          .to('.face--top .face__panel', {})
+          .to('.face--left .face__panel', {}, 0)
+          .to('.face--front .face__panel', {}, 0)
+          .to('.face--back .face__panel', {}, 0.3)
+          .to('.face--right .face__panel', {}, 0.3)
+          .to('.face--bottom .face__panel', {}, 0.3);
+
+        return tl;
+      }
+
+      gtl.add(facesIn()).add(facesOut(), '-=0.3').timeScale(1.1);
+
+      // 배경
+      $(function () {
+        var c = document.getElementById('canv'),
+          $ = c.getContext('2d'),
+          w = (c.width = window.innerWidth),
+          h = (c.height = window.innerHeight),
+          t = 0,
+          num = 550,
+          u = 0,
+          s,
+          a,
+          b,
+          x,
+          y,
+          _x,
+          _y,
+          _t = 1 / 60;
+
+        var anim = function () {
+          $.globalCompositeOperation = 'source-over';
+          window.requestAnimationFrame(anim);
+          $.fillStyle = 'hsla(0, 0%, 0%, .35)';
+          $.fillRect(0, 0, w, h);
+          $.globalCompositeOperation = 'lighter';
+          for (var i = 0; i < 1; i++) {
+            x = 0;
+            $.beginPath();
+            for (var j = 0; j < num; j++) {
+              x += 0.45 * Math.sin(11);
+              y = (x * Math.sin(i + 3.0 * t + x / 15)) / 15;
+              _x = x * Math.cos(b) + y * Math.sin(i);
+              _y = x * Math.sin(b) + y * Math.cos(i);
+              b = (j * 2.66 * Math.PI) / 4;
+              $.lineWidth = 0.04;
+              $.lineTo(w / 2 + _x, h / 2 + _y);
+            }
+            var g = $.createLinearGradient(w / 2 + _x, h / 2 + _y, 1, w / 2 + _x, h / 2 + _y);
+            g.addColorStop(0.1, 'hsla(' + u + ',95%,50%,1)');
+            g.addColorStop(0.5, 'hsla(0,0%,10%,1)');
+            g.addColorStop(1, 'hsla(0,0%,0%,1)');
+            $.strokeStyle = g;
+            $.stroke();
+          }
+          t += _t;
+          u -= 0.2;
+        };
+        anim();
+
+        window.addEventListener(
+          'resize',
+          function () {
+            c.width = w = window.innerWidth;
+            c.height = h = window.innerHeight;
+          },
+          false
+        );
+      });
+
+      // 배경음악
+      var audio = new Audio('./audio/bg_music.mp3');
+
+      /*추가된 부분: 종료되면 처음부터 다시 재생*/
+      audio.addEventListener(
+        'ended',
+        function () {
+          this.currentTime = 0;
+          this.play();
+        },
+        false
+      );
+
+      $('.helix').on('click', function () {
+        var audioPlayer = $('.helix').attr('onclick');
+        if (audioPlayer == 'audio.pause()') {
+          $('.helix').removeClass('stop_bg');
+          audio.play();
+          $('.helix').attr('onclick', 'audio.play()');
+        } else {
+          $('.helix').addClass('stop_bg');
+          audio.pause();
+          $('.helix').attr('onclick', 'audio.pause()');
+        }
+      });
+    </script>
+  </body>
+</html>

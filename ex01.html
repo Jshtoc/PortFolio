@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .card {
+  display: inline-block;
+  width: 70px;
+  height: 100px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  perspective: 140px;
+}
+
+.card-inner {
+  /* position: absolute를 이용하여 카드 앞뒤를 곂쳐지게 함*/
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #828282;
+}
+
+.card-front {
+  background: navy;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+  </style>
+</head>
+<body>
+  <div class="jsTech-wrap">
+    <div class="container">
+
+      <!-- <div class="card">
+        <div class="card-inner">
+          <div class="card-front"></div>
+          <div class="card-back"></div>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+  <script>
+ 
+      //카드 뒤집기 스크립트
+      const x = 4;
+      const y = 3;
+      //카드 뒤 color
+      const backColor = ['#ffc312','#ffc312','#c4e538','#c4e538',
+        '#12cbc4','#12cbc4','#ed4c67','#ed4c67','#fda7df','#fda7df','#833471','#833471'
+      ]
+
+      // 색깔 섞기
+      let chosenColor = [];
+
+      while(backColor.length > 0){
+        let color = Math.floor(Math.random() * backColor.length);
+        let mixedColor = backColor.splice(color, 1)[0];
+        chosenColor.push(mixedColor);
+      }
+      // console.log(chosenColor);
+
+      function cardSetting(x,y){
+        for(let i = 0;i < x * y;i++){
+          const card = $.createElement('div');
+          card.className='card';
+          const cardInner = $.createElement('div');
+          cardInner.className='card-inner';
+          const cardFront = $.createElement('div');
+          cardFront.className = 'card-front';
+          const cardBack =  $.createElement('div');
+          cardBack.className = 'card-back';
+          cardBack.style.backgroundColor = chosenColor[i];
+          cardInner.appendChild(cardFront);
+          cardInner.appendChild(cardBack);
+          card.appendChild(cardInner);
+          $('.jsTech-wrap > .container').appendChild(card);
+
+          //클릭해서 카드 뒤집기
+          card.addEventListener('click',function(){
+            card.classList.toggle('flipped');
+          });
+        }
+      }
+
+      cardSetting(x,y);
+  </script>
+</body>
+</html>

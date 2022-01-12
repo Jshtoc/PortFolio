@@ -1,0 +1,767 @@
+<?php
+  include '../connect/session.php';
+  include '../connect/connect.php';
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정승호 PORTFOLIO</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style4.css" />
+    <link rel="stylesheet" href="../css/css.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="scroll">0</div>
+    <!-- //scroll -->
+
+    <div id="loader" class="loader_active">
+      <div class="container">
+        <div class="scene">
+          <div class="cubes1">
+            <div class="cube1">
+              <div class="face face--front">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--back">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--left">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--right">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--top">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--bottom">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //loader -->
+
+    <!-- header -->
+    <?php
+      include '../component/header.php';
+    ?>
+    <!-- //header -->
+
+    <div
+      class="view_page_btn_wrap"
+      data-3000="display:none"
+      data-3001="display:flex;opacity:0"
+      data-3100="opacity:1"
+    >
+      <div class="next_btn">
+        <p>
+          <span>CONTACT</span>
+        </p>
+        <span class="icon-right"></span><span class="icon-right after"></span>
+      </div>
+    </div>
+    <!-- //view page btn -->
+
+    <div id="bg_wrap"></div>
+    <!-- //bg_wrap -->
+
+    <div class="line_css_wrap">
+      <div class="group_line">
+        <span class="top_line" data-0="width:0%;" data-1000="width:100%;"></span>
+        <div class="line_bg" data-0="opacity:0" data-1300="opacity:1"></div>
+        <span class="bottom_line" data-0="width:0%;" data-1500="width:100%;"></span>
+      </div>
+    </div>
+    <!-- //line_css_wrap -->
+    <div class="css_content_wrap" data-1500="width:0%;" data-2500="width:100%;">
+      <div class="slider js-slider">
+        <div class="slider__inner js-slider__inner">
+          <div class="slide js-slide">
+            <div class="css_cont css_cont01">
+              <div class="frame">
+                <div class="center">
+                  <div class="circle">
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide js-slide">
+            <div class="css_cont css_cont02">
+              <div class="wrapper">
+                <div></div>
+              </div>
+              <div class="wrapper">
+                <div></div>
+              </div>
+              <div class="wrapper">
+                <div></div>
+              </div>
+              <div class="wrapper">
+                <div></div>
+              </div>
+              <div class="wrapper">
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide js-slide">
+            <div class="css_cont css_cont03">
+              <div class="wave_circles">
+                <div class="row">
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                </div>
+                <div class="row">
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                </div>
+                <div class="row">
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                </div>
+                <div class="row">
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                </div>
+                <div class="row">
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                </div>
+                <div class="row">
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                </div>
+                <div class="row">
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                </div>
+                <div class="row">
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                </div>
+                <div class="row">
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                </div>
+                <div class="row">
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                  <div class="wava_circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide js-slide">
+            <div class="css_cont css_cont04">
+              <div class="rotate_circles">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <?php
+      include '../component/footer.php';
+    ?>
+    <!-- //footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script>
+      $(function () {
+        setTimeout(() => {
+          $('#loader').removeClass('loader_active');
+          $('.header,.footer,.cube_sec,.next_btn').removeClass('hide');
+        }, 100);
+      });
+      var scrTop = $(window).scrollTop();
+      $(window).scroll(function () {
+        let scroll = $(window).scrollTop();
+        $('.scroll').text(parseInt(scroll));
+      });
+      var s = skrollr.init();
+      $('.next_btn').on('click', function () {
+        var offset = $(document).height();
+        $('html').animate({ scrollTop: offset }, 1200);
+      });
+      // $(".gel, .hex-brick").addClass("active");
+      // page 넘어가기 script
+      function pageClick() {
+        var elem = $('.next_btn p span').text();
+        document.querySelectorAll('.next_btn,.next_btns p span').forEach(elem => {
+          elem.addEventListener('click', e => {
+            e.preventDefault();
+            const hrefName = elem.innerText.toLowerCase();
+            //alert(hrefName);
+            // document.getElementById('loader').style.visibility = 'visible';
+            document.getElementById('loader').classList.add('loader_active');
+
+            $('.header,.footer,.cube_sec,.view_page_btn_wrap').addClass('hide');
+            setTimeout(() => {
+              document.getElementById('loader').classList.add('loader_active');
+              window.location.href =
+                'http://dkdl1566.dothome.co.kr/PortFolio/pages/' + hrefName + '.html';
+            }, 1800);
+          });
+        });
+      }
+      pageClick();
+      // 하단 메뉴
+
+      // loader
+      select = e => document.querySelector(e);
+      selectAll = e => document.querySelectorAll(e);
+
+      let getDocProp = gsap.getProperty(':root'),
+        midCol = getDocProp('--mid-color'),
+        outCol = getDocProp('--out-color'),
+        faceDuration = 0.5,
+        staggerOffset = 0.1,
+        easing = 'sine.inOut',
+        gtl = gsap.timeline({ repeat: -1, delay: 0.5 });
+
+      gsap.set('.container', { autoAlpha: 1 });
+
+      function facesIn() {
+        let tl = gsap
+          .timeline({
+            defaults: {
+              scaleY: 1,
+              opacity: 0.9,
+              backgroundColor: midCol,
+              transformOrigin: 'center bottom',
+              duration: faceDuration,
+              ease: easing,
+              stagger: {
+                each: staggerOffset
+              }
+            }
+          })
+          .to('.face--back .face__panel', {})
+          .to('.face--right .face__panel', {}, 0)
+          .to('.face--bottom .face__panel', {}, 0)
+          .to('.face--top .face__panel', {}, 0.3)
+          .to('.face--left .face__panel', {}, 0.3)
+          .to('.face--front .face__panel', {}, 0.3);
+
+        return tl;
+      }
+
+      function facesOut() {
+        let tl = gsap
+          .timeline({
+            defaults: {
+              scaleY: 0,
+              opacity: 0,
+              backgroundColor: outCol,
+              transformOrigin: 'center top',
+              duration: faceDuration,
+              ease: easing,
+              stagger: {
+                each: staggerOffset
+              }
+            }
+          })
+          .to('.face--top .face__panel', {})
+          .to('.face--left .face__panel', {}, 0)
+          .to('.face--front .face__panel', {}, 0)
+          .to('.face--back .face__panel', {}, 0.3)
+          .to('.face--right .face__panel', {}, 0.3)
+          .to('.face--bottom .face__panel', {}, 0.3);
+
+        return tl;
+      }
+
+      gtl.add(facesIn()).add(facesOut(), '-=0.3').timeScale(1.1);
+
+      // 배경
+      // Init Context
+      let c = document.createElement('canvas').getContext('2d');
+      let postctx = document
+        .getElementById('bg_wrap')
+        .appendChild(document.createElement('canvas'))
+        .getContext('2d');
+      let canvas = c.canvas;
+      let vertices = [];
+
+      // Effect Properties
+      let vertexCount = 7000;
+      let vertexSize = 3;
+      let oceanWidth = 204;
+      let oceanHeight = -80;
+      let gridSize = 32;
+      let waveSize = 16;
+      let perspective = 100;
+
+      // Common variables
+      let depth = (vertexCount / oceanWidth) * gridSize;
+      let frame = 0;
+      let { sin, cos, tan, PI } = Math;
+
+      // Render loop
+      let loop = () => {
+        let rad = (sin(frame / 100) * PI) / 20;
+        let rad2 = (sin(frame / 50) * PI) / 10;
+        frame++;
+        if (
+          postctx.canvas.width !== postctx.canvas.offsetWidth ||
+          postctx.canvas.height !== postctx.canvas.offsetHeight
+        ) {
+          postctx.canvas.width = canvas.width = postctx.canvas.offsetWidth;
+          postctx.canvas.height = canvas.height = postctx.canvas.offsetHeight;
+        }
+
+        c.fillStyle = `hsl(200deg, 100%, 2%)`;
+        c.fillRect(0, 0, canvas.width, canvas.height);
+        c.save();
+        c.translate(canvas.width / 2, canvas.height / 2);
+
+        c.beginPath();
+        vertices.forEach((vertex, i) => {
+          let ni = i + oceanWidth;
+          let x = vertex[0] - (frame % (gridSize * 2));
+          let z = vertex[2] - ((frame * 2) % gridSize) + (i % 2 === 0 ? gridSize / 2 : 0);
+          let wave =
+            cos(frame / 45 + x / 50) - sin(frame / 20 + z / 50) + sin(frame / 30 + (z * x) / 10000);
+          let y = vertex[1] + wave * waveSize;
+          let a = Math.max(0, 1 - Math.sqrt(x ** 2 + z ** 2) / depth);
+          let tx, ty, tz;
+
+          y -= oceanHeight;
+
+          // Transformation variables
+          tx = x;
+          ty = y;
+          tz = z;
+
+          // Rotation Y
+          tx = x * cos(rad) + z * sin(rad);
+          tz = -x * sin(rad) + z * cos(rad);
+
+          x = tx;
+          y = ty;
+          z = tz;
+
+          // Rotation Z
+          tx = x * cos(rad) - y * sin(rad);
+          ty = x * sin(rad) + y * cos(rad);
+
+          x = tx;
+          y = ty;
+          z = tz;
+
+          // Rotation X
+
+          ty = y * cos(rad2) - z * sin(rad2);
+          tz = y * sin(rad2) + z * cos(rad2);
+
+          x = tx;
+          y = ty;
+          z = tz;
+
+          x /= z / perspective;
+          y /= z / perspective;
+
+          if (a < 0.01) return;
+          if (z < 0) return;
+
+          c.globalAlpha = a;
+          c.fillStyle = `hsl(${180 + wave * 20}deg, 100%, 50%)`;
+          c.fillRect(
+            x - (a * vertexSize) / 2,
+            y - (a * vertexSize) / 2,
+            a * vertexSize,
+            a * vertexSize
+          );
+          c.globalAlpha = 1;
+        });
+        c.restore();
+
+        // Post-processing
+        postctx.drawImage(canvas, 0, 0);
+
+        postctx.globalCompositeOperation = 'screen';
+        postctx.filter = 'blur(16px)';
+        postctx.drawImage(canvas, 0, 0);
+        postctx.filter = 'blur(0)';
+        postctx.globalCompositeOperation = 'source-over';
+
+        requestAnimationFrame(loop);
+      };
+
+      // Generating dots
+      for (let i = 0; i < vertexCount; i++) {
+        let x = i % oceanWidth;
+        let y = 0;
+        let z = (i / oceanWidth) >> 0;
+        let offset = oceanWidth / 2;
+        vertices.push([(-offset + x) * gridSize, y * gridSize, z * gridSize]);
+      }
+
+      loop();
+
+      // 배경음악
+      var audio = new Audio('../audio/bg_music.mp3');
+
+      /*추가된 부분: 종료되면 처음부터 다시 재생*/
+      audio.addEventListener(
+        'ended',
+        function () {
+          this.currentTime = 0;
+          this.play();
+        },
+        false
+      );
+
+      $('.helix').on('click', function () {
+        var audioPlayer = $('.helix').attr('onclick');
+        if (audioPlayer == 'audio.pause()') {
+          $('.helix').removeClass('stop_bg');
+          audio.play();
+          $('.helix').attr('onclick', 'audio.play()');
+        } else {
+          $('.helix').addClass('stop_bg');
+          audio.pause();
+          $('.helix').attr('onclick', 'audio.pause()');
+        }
+      });
+
+      // 슬라이더 js
+      function _getClosest(item, array, getDiff) {
+        var closest, diff;
+
+        if (!Array.isArray(array)) {
+          throw new Error('Get closest expects an array as second argument');
+        }
+
+        array.forEach(function (comparedItem, comparedItemIndex) {
+          var thisDiff = getDiff(comparedItem, item);
+
+          if (thisDiff >= 0 && (typeof diff == 'undefined' || thisDiff < diff)) {
+            diff = thisDiff;
+            closest = comparedItemIndex;
+          }
+        });
+
+        return closest;
+      }
+
+      function number(item, array) {
+        return _getClosest(item, array, function (comparedItem, item) {
+          return Math.abs(comparedItem - item);
+        });
+      }
+
+      function lerp(a, b, n) {
+        return (1 - n) * a + n * b;
+      }
+
+      class Slider {
+        constructor(options = {}) {
+          this.bind();
+
+          this.opts = {
+            el: options.el || '.js-slider',
+            ease: options.ease || 0.1,
+            speed: options.speed || 1.5,
+            velocity: 25,
+            scroll: options.scroll || false
+          };
+
+          this.slider = document.querySelector('.js-slider');
+          this.sliderInner = this.slider.querySelector('.js-slider__inner');
+          this.slides = [...this.slider.querySelectorAll('.js-slide')];
+          this.slidesNumb = this.slides.length;
+
+          this.rAF = undefined;
+
+          this.sliderWidth = 0;
+
+          this.onX = 0;
+          this.offX = 0;
+
+          this.currentX = 0;
+          this.lastX = 0;
+
+          this.min = 0;
+          this.max = 0;
+
+          this.centerX = window.innerWidth / 2;
+        }
+
+        bind() {
+          ['setPos', 'run', 'on', 'off', 'resize'].forEach(fn => (this[fn] = this[fn].bind(this)));
+        }
+
+        setBounds() {
+          const bounds = this.slides[0].getBoundingClientRect();
+          const slideWidth = bounds.width;
+
+          this.sliderWidth = this.slidesNumb * slideWidth;
+          this.max = -(this.sliderWidth - window.innerWidth);
+
+          this.slides.forEach((slide, index) => {
+            slide.style.left = `${index * slideWidth}px`;
+          });
+        }
+
+        setPos(e) {
+          if (!this.isDragging) return;
+          this.currentX = this.offX + (e.clientX - this.onX) * this.opts.speed;
+          this.clamp();
+        }
+
+        clamp() {
+          this.currentX = Math.max(Math.min(this.currentX, this.min), this.max);
+        }
+
+        run() {
+          this.lastX = lerp(this.lastX, this.currentX, this.opts.ease);
+          this.lastX = Math.floor(this.lastX * 100) / 100;
+
+          const sd = this.currentX - this.lastX;
+          const acc = sd / window.innerWidth;
+          let velo = +acc;
+
+          this.sliderInner.style.transform = `translate3d(${this.lastX}px, 0, 0) skewX(${
+            velo * this.opts.velocity
+          }deg)`;
+
+          this.requestAnimationFrame();
+        }
+
+        on(e) {
+          this.isDragging = true;
+          this.onX = e.clientX;
+          this.slider.classList.add('is-grabbing');
+        }
+
+        off(e) {
+          this.snap();
+          this.isDragging = false;
+          this.offX = this.currentX;
+          this.slider.classList.remove('is-grabbing');
+        }
+
+        closest() {
+          const numbers = [];
+          this.slides.forEach((slide, index) => {
+            const bounds = slide.getBoundingClientRect();
+            const diff = this.currentX - this.lastX;
+            const center = bounds.x + diff + bounds.width / 2;
+            const fromCenter = this.centerX - center;
+            numbers.push(fromCenter);
+          });
+
+          let closest = number(0, numbers);
+          closest = numbers[closest];
+
+          return {
+            closest
+          };
+        }
+
+        snap() {
+          const { closest } = this.closest();
+
+          this.currentX = this.currentX + closest;
+          this.clamp();
+        }
+
+        requestAnimationFrame() {
+          this.rAF = requestAnimationFrame(this.run);
+        }
+
+        cancelAnimationFrame() {
+          cancelAnimationFrame(this.rAF);
+        }
+
+        addEvents() {
+          this.run();
+
+          this.slider.addEventListener('mousemove', this.setPos, { passive: true });
+          this.slider.addEventListener('mousedown', this.on, false);
+          this.slider.addEventListener('mouseup', this.off, false);
+
+          window.addEventListener('resize', this.resize, false);
+        }
+
+        removeEvents() {
+          this.cancelAnimationFrame(this.rAF);
+
+          this.slider.removeEventListener('mousemove', this.setPos, { passive: true });
+          this.slider.removeEventListener('mousedown', this.on, false);
+          this.slider.removeEventListener('mouseup', this.off, false);
+        }
+
+        resize() {
+          this.setBounds();
+        }
+
+        destroy() {
+          this.removeEvents();
+
+          this.opts = {};
+        }
+
+        init() {
+          this.setBounds();
+          this.addEvents();
+        }
+      }
+
+      const slider = new Slider();
+      slider.init();
+    </script>
+  </body>
+</html>

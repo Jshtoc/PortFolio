@@ -1,0 +1,112 @@
+/* scroll */
+.scroll {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  z-index: 12002;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+  /* background: rgba(0,0,0,0.3); */
+  position: relative;
+}
+
+.section1 {
+  position: fixed;
+  z-index: 8000;
+  width: 100%;
+  height: 100vh;
+}
+.tit {
+  position: absolute;
+  left: 0;
+  top: 25%;
+  width: 100%;
+  height: 150px;
+}
+.tit p {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tit p span {
+  position: absolute;
+  top: 0;
+  color: #fff;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 500;
+  font-size: 8vw;
+}
+.tit p span:nth-child(1) {
+  left: 0%;
+}
+.tit p span:nth-child(2) {
+  left: 5.5%;
+}
+.tit p span:nth-child(3) {
+  left: 12%;
+}
+.tit p span:nth-child(4) {
+  left: 18%;
+}
+.tit p span:nth-child(5) {
+  left: 24%;
+}
+.tit p span:nth-child(6) {
+  left: 30%;
+}
+.tit p span.tit_line {
+  position: absolute;
+  top: 97%;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+}
+.my_info {
+  position: absolute;
+  right: 0;
+  bottom: 35%;
+  width: 30%;
+  height: 200px;
+  overflow: hidden;
+}
+.my_info_wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.my_info p {
+  color: #fff;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 100;
+  font-size: 2vw;
+}
+.my_info_wrap .name {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.my_info_wrap .phone {
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+.my_info_wrap .e_mail {
+  position: absolute;
+  right: 0;
+  top: 60%;
+}
+/* //section1 */

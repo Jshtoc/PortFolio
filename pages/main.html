@@ -1,0 +1,412 @@
+<?php
+  include '../connect/session.php';
+  include '../connect/connect.php';
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정승호 PORTFOLIO</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style4.css" />
+    <link rel="stylesheet" href="../css/index8.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="scroll">0</div>
+    <!-- //scroll -->
+
+    <div id="loader">
+      <div class="container">
+        <div class="scene">
+          <div class="cubes1">
+            <div class="cube1">
+              <div class="face face--front">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--back">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--left">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--right">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--top">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--bottom">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //loader -->
+
+    <!-- header -->
+    <?php
+          include '../component/header.php';
+      ?>
+    <!-- //header -->
+
+    <div class="background-animation cube_sec">
+      <div class="cube_box">
+        <div class="cube">
+          <div
+            data-4000="width:200px;height:200px"
+            data-5000="width:1000px;height:1000px;opacity:1"
+          ></div>
+          <div
+            data-4000="width:200px;height:200px"
+            data-5000="width:1000px;height:1000px;display:block"
+          ></div>
+          <div
+            data-4000="width:200px;height:200px"
+            data-5000="width:1000px;height:1000px;display:block"
+          ></div>
+          <div
+            data-4000="width:200px;height:200px"
+            data-5000="width:1000px;height:1000px;display:block"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="background-animation cube_sec"
+      data-500="opacity:0;left:0%"
+      data-1000="opacity:1;left:-16%"
+      data-2500="left:-16%;top:30%"
+      data-3000="left:-16%;top:0%"
+      data-3500="left:0%;top:0%;opacity:1"
+      data-4000="left:0%;top:30%;opacity:0;display:block;"
+      data-4001="left:0%;top:30%;opacity:0;display:none;"
+    >
+      <div class="cube_box">
+        <div class="cube">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="background-animation cube_sec"
+      data-1000="opacity:0;left:0%"
+      data-1500="opacity:1;left:16%"
+      data-2500="left:16%;top:30%"
+      data-3000="left:16%;top:60%"
+      data-3500="left:0%;top:60%;opacity:1"
+      data-4000="left:0%;top:30%;opacity:0;display:block;"
+      data-4001="left:0%;top:30%;opacity:0;display:none;"
+    >
+      <div class="cube_box">
+        <div class="cube">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="background-animation cube_sec"
+      data-1500="opacity:0;left:0%"
+      data-2000="opacity:1;left:-32%"
+      data-2500="left:-32%;top:30%"
+      data-3000="left:-24%;top:30%"
+      data-3500="left:-16%;top:30%;opacity:1"
+      data-4000="left:0%;top:30%;opacity:0;display:block;"
+      data-4001="left:0%;top:30%;opacity:0;display:none;"
+    >
+      <div class="cube_box">
+        <div class="cube">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="background-animation cube_sec"
+      data-2000="opacity:0;left:0%"
+      data-2500="opacity:1;left:32%"
+      data-2500="left:32%;top:30%"
+      data-3000="left:24%;top:30%"
+      data-3500="left:16%;top:30%;opacity:1"
+      data-4000="left:0%;top:30%;opacity:0;display:block;"
+      data-4001="left:0%;top:30%;opacity:0;display:none;"
+    >
+      <div class="cube_box">
+        <div class="cube">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <!-- //background_animation sec -->
+
+    <div
+      class="view_page_btn_wrap"
+      data-6001="display:none"
+      data-6002="display:flex;opacity:0"
+      data-6400="opacity:1"
+    >
+      <div class="next_btn">
+        <p>
+          <span>PROJECT</span>
+        </p>
+        <span class="icon-right"></span><span class="icon-right after"></span>
+      </div>
+    </div>
+
+    <!-- //view page btn -->
+
+    <!-- footer -->
+    <?php
+          include '../component/footer.php';
+      ?>
+    <!-- //footer -->
+
+    <!-- <footer class="footer">
+      <h2>
+        <p>
+          <span>PORTFOLIO</span>
+        </p>
+      </h2>
+      <div class="bottom_text_wrap">
+        <div class="page_num">
+          <div class="page_icon_sec">
+            <div class="page_icon"></div>
+            <div class="page_icon_num">
+              <p>
+                <span>01</span>
+              </p>
+            </div>
+          </div>
+          <div class="bottom_text_info">
+            <p>Welcome my portfolio site If you scroll down, you can see a lot of content</p>
+          </div>
+          <div class="right_page_text">
+            <div class="right_page">
+              <div class="top_right">
+                <p>
+                  <span>01</span>
+                </p>
+              </div>
+              <div class="bottom_right">
+                <p>
+                  <span>05</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page_nav">
+        <div class="page_nav_btns">
+          <div class="next_btns">
+            <p>
+              <span>PROJECT</span>
+            </p>
+            <p><span>SCRIPT</span></p>
+            <p><span>CSS</span></p>
+            <p><span>CONTACT</span></p>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+    <!-- //footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script>
+      var scrTop = $(window).scrollTop();
+      $(window).scroll(function () {
+        let scroll = $(window).scrollTop();
+        $('.scroll').text(parseInt(scroll));
+      });
+      var s = skrollr.init();
+      $('.next_btn').on('click', function () {
+        var offset = $(document).height();
+        $('html').animate({ scrollTop: offset }, 1200);
+      });
+      // $(".gel, .hex-brick").addClass("active");
+      // page 넘어가기 script
+      function pageClick() {
+        var elem = $('.next_btn p span').text();
+        document.querySelectorAll('.next_btn,.next_btns p span').forEach(elem => {
+          elem.addEventListener('click', e => {
+            e.preventDefault();
+            const hrefName = elem.innerText.toLowerCase();
+            //alert(hrefName);
+            // document.getElementById('loader').style.visibility = 'visible';
+            document.getElementById('loader').classList.add('loader_active');
+
+            $('.header,.footer,.cube_sec,.view_page_btn_wrap').addClass('hide');
+            setTimeout(() => {
+              document.getElementById('loader').classList.add('loader_active');
+              window.location.href =
+                'http://dkdl1566.dothome.co.kr/PortFolio/pages/' + hrefName + '.html';
+            }, 1800);
+          });
+        });
+      }
+      pageClick();
+      // 하단 메뉴
+
+      // loader
+      select = e => document.querySelector(e);
+      selectAll = e => document.querySelectorAll(e);
+
+      let getDocProp = gsap.getProperty(':root'),
+        midCol = getDocProp('--mid-color'),
+        outCol = getDocProp('--out-color'),
+        faceDuration = 0.5,
+        staggerOffset = 0.1,
+        easing = 'sine.inOut',
+        gtl = gsap.timeline({ repeat: -1, delay: 0.5 });
+
+      gsap.set('.container', { autoAlpha: 1 });
+
+      function facesIn() {
+        let tl = gsap
+          .timeline({
+            defaults: {
+              scaleY: 1,
+              opacity: 0.9,
+              backgroundColor: midCol,
+              transformOrigin: 'center bottom',
+              duration: faceDuration,
+              ease: easing,
+              stagger: {
+                each: staggerOffset
+              }
+            }
+          })
+          .to('.face--back .face__panel', {})
+          .to('.face--right .face__panel', {}, 0)
+          .to('.face--bottom .face__panel', {}, 0)
+          .to('.face--top .face__panel', {}, 0.3)
+          .to('.face--left .face__panel', {}, 0.3)
+          .to('.face--front .face__panel', {}, 0.3);
+
+        return tl;
+      }
+
+      function facesOut() {
+        let tl = gsap
+          .timeline({
+            defaults: {
+              scaleY: 0,
+              opacity: 0,
+              backgroundColor: outCol,
+              transformOrigin: 'center top',
+              duration: faceDuration,
+              ease: easing,
+              stagger: {
+                each: staggerOffset
+              }
+            }
+          })
+          .to('.face--top .face__panel', {})
+          .to('.face--left .face__panel', {}, 0)
+          .to('.face--front .face__panel', {}, 0)
+          .to('.face--back .face__panel', {}, 0.3)
+          .to('.face--right .face__panel', {}, 0.3)
+          .to('.face--bottom .face__panel', {}, 0.3);
+
+        return tl;
+      }
+
+      gtl.add(facesIn()).add(facesOut(), '-=0.3').timeScale(1.1);
+
+      // 배경음악
+      var audio = new Audio('../audio/bg_music.mp3');
+
+      /*추가된 부분: 종료되면 처음부터 다시 재생*/
+      audio.addEventListener(
+        'ended',
+        function () {
+          this.currentTime = 0;
+          this.play();
+        },
+        false
+      );
+
+      $('.helix').on('click', function () {
+        var audioPlayer = $('.helix').attr('onclick');
+        if (audioPlayer == 'audio.pause()') {
+          $('.helix').removeClass('stop_bg');
+          audio.play();
+          $('.helix').attr('onclick', 'audio.play()');
+        } else {
+          $('.helix').addClass('stop_bg');
+          audio.pause();
+          $('.helix').attr('onclick', 'audio.pause()');
+        }
+      });
+    </script>
+  </body>
+</html>

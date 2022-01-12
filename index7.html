@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정승호 PORTFOLIO</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index7.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="scroll">0</div>
+
+    <header class="header">
+      <h1>JSH</h1>
+    </header>
+
+    <footer class="footer">
+      <h2>PORTFOLIO</h2>
+      <p>Welcome my portfolio site If you scroll down, you can see a lot of content</p>
+    </footer>
+
+    <div id="contents">
+      <section id="section1">
+        <div id="grid"></div>
+
+        <svg id="base-arrow" viewBox="0 0 122 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6 34H116M116 34L87.5 62.5M116 34L87.5 5.5"
+            stroke="white"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </section>
+      <!-- //section1 -->
+      <section id="section2"></section>
+      <!-- //section2 -->
+      <section id="section3"></section>
+      <!-- //section3 -->
+      <section id="section4"></section>
+      <!-- //section4 -->
+      <section id="section5"></section>
+      <!-- //section5 -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+    <script>
+      $(window).scroll(function () {
+        let scroll = $(window).scrollTop();
+        $('.scroll').text(parseInt(scroll));
+      });
+      var s = skrollr.init();
+
+      /**
+       * Settings
+       */
+      const baseArrow = document.getElementById('base-arrow');
+      const grid = document.getElementById('grid');
+      let arrows, arrowCenters;
+      let numArrowsX, numArrowsY;
+      const center = new THREE.Vector2();
+      const mousePos = new THREE.Vector2();
+      const PI = Math.PI;
+      let maxDist;
+
+      // Number of Arrows
+      let arrowDensity = 15;
+
+      /**
+       * Throttler Util
+       */
+      function throttle(fn) {
+        let didRequest = false;
+        return param => {
+          if (!didRequest) {
+            requestAnimationFrame(() => {
+              fn(param);
+              didRequest = false;
+            });
+            didRequest = true;
+          }
+        };
+      }
+
+      /**
+       * Map Util
+       */
+      function map(value, min1, max1, min2, max2) {
+        return ((value - min1) * (max2 - min2)) / (max1 - min1) + min2;
+      }
+
+      /**
+       * Init IFFE
+       */
+      var init = (function () {
+        window.addEventListener('resize', throttle(handleResize));
+        window.addEventListener('mousemove', throttle(handleMouseMove));
+        handleResize();
+      })();
+
+      /**
+       * Generate Arrow Grid
+       */
+      function generateArrowGrid() {
+        arrows = [];
+        arrowCenters = [];
+
+        // Create grid
+        for (let i = 0; i < numArrowsX * numArrowsY; i += 1) {
+          const newArrow = baseArrow.cloneNode(true);
+          newArrow.id = `arrow-${i}`;
+          newArrow.setAttribute('class', 'arrow');
+          grid.appendChild(newArrow);
+          arrows.push(newArrow);
+
+          // save center point for use later
+          const arrowRect = newArrow.getBoundingClientRect();
+          const arrowCenter = new THREE.Vector2(
+            arrowRect.left + newArrow.clientWidth * 0.5,
+            arrowRect.top + newArrow.clientHeight * 0.5
+          );
+          arrowCenters.push(arrowCenter);
+        }
+      }
+
+      /**
+       * Handle Mouse Mover
+       * @param {Event}
+       */
+      function handleMouseMove(event) {
+        mousePos.set(event.clientX, event.clientY);
+
+        arrows.forEach((arrow, i) => {
+          const vecToMouse = new THREE.Vector2().subVectors(mousePos, arrowCenters[i]);
+          const angle = vecToMouse.angle();
+          const dist = mousePos.distanceTo(arrowCenters[i]);
+          arrow.style.setProperty('--arrow-angle', angle);
+        });
+      }
+
+      /**
+       * Handle Resize
+       */
+      function handleResize() {
+        // recreate the grid and elements
+        const largeSide = Math.max(innerWidth, innerHeight);
+        const size = Math.round(largeSide / arrowDensity);
+
+        numArrowsX = Math.ceil(innerWidth / size);
+        numArrowsY = Math.ceil(innerHeight / size);
+        grid.style.setProperty('--num-columns', numArrowsX);
+        grid.style.setProperty('--num-rows', numArrowsY);
+        grid.innerHTML = '';
+        generateArrowGrid();
+        center.set(innerWidth * 0.5, innerHeight * 0.5);
+        maxDist = center.length() * 2;
+
+        // send a fake mouse event to trigger the initial point
+        handleMouseMove({
+          clientX: center.x,
+          clientY: center.y
+        });
+      }
+    </script>
+  </body>
+</html>

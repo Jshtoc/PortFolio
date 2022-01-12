@@ -1,0 +1,528 @@
+@charset 'utf-8';
+
+/* index css */
+.container {
+  margin: 0 auto;
+  width: 1280px;
+}
+/* //container */
+.intro_sec1,
+.intro_sec2 {
+  width: 100%;
+}
+.intro_sec1 {
+  height: 1004px;
+}
+.intro_sec2 {
+  height: 1200px;
+}
+.intro_sec1 ul,
+.intro_sec2 ul {
+  display: flex;
+  justify-content: center;
+}
+.intro_sec1 ul > li,
+.intro_sec2 ul > li {
+  width: 426.6666666666667%;
+  height: 1004px;
+  background-color: #fff;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.intro_sec2 ul > li {
+  height: 1200px;
+}
+.intro_sec1 ul > li:nth-child(1),
+.intro_sec1 ul > li:nth-child(2),
+.intro_sec2 ul > li:nth-child(1),
+.intro_sec2 ul > li:nth-child(2) {
+  border-right: none;
+}
+/* intro1 left_sec_style */
+.intro_nav {
+  margin: 10px 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #1f352e;
+  border-bottom: 1px solid #1f352e;
+}
+.intro_nav a {
+  width: 170px;
+  height: 42px;
+  background-color: #1f352e;
+  text-align: center;
+  line-height: 42px;
+  color: #fff;
+  font-family: "SCDream2";
+  font-size: 20px;
+}
+.intro_nav span {
+  width: 170px;
+  height: 42px;
+  color: #1f352e;
+  text-align: center;
+  line-height: 42px;
+  font-family: "SCDream2";
+  font-size: 20px;
+}
+.left_intro1 > .left_tit {
+  position: relative;
+  height: 960px;
+}
+.left_intro1 > .left_tit > span {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  font-family: 'Poppins';
+  font-weight: 100;
+  font-size: 130px;
+  color: #1f352e;
+}
+/* intro1 center_sec_style */
+.center_intro1 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.center_intro1 > .center_tit {
+  margin-top: 74px;
+}
+.center_intro1 > .center_tit > span,
+.center_tit > span {
+  font-family: 'Post No Bills Jaffna';
+  font-weight: bold;
+  font-size: 130px;
+  color: #1f352e;
+}
+.center_intro1 > .intro_txtbox {
+  margin-bottom: 230px;
+  padding: 10px;
+}
+.intro_txtbox > .intro_tit {
+  padding-left: 10px;
+  color: #1f352e;
+  font-family: "SCDream2";
+  font-size: 20px;
+  font-weight: 600;
+}
+.intro_txt {
+  padding: 10px;
+  font-family: "SCDream2";
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: -1px;
+  line-height: 27px;
+  text-align: justify;
+}
+/* intro1 right_sec_style */
+.right_intro1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+.right_intro1 > .right_tit {
+  width: 100%;
+  text-align: center;
+}
+.right_tit > span {
+  color: #1f352e;
+  font-family: 'Poppins';
+  font-size: 130px;
+  font-weight: 200;
+  margin-bottom: 100px;
+}
+.right_intro1 > .intro_nav {
+  width: 100%;
+  margin-bottom: 15px;
+}
+/* intro_sec2 style */
+.left_intro2 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.left_intro2 > span {
+  font-size: 110px;
+  font-weight: 300;
+  font-style: normal;
+  color: #1f352e;
+  letter-spacing: -0.24px;
+}
+.center_intro2 {
+  position: relative;
+}
+.center_intro2 > .center_tit {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+}
+.center_txtbox {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+}
+.right_intro2 {
+  position: relative;
+}
+.right_intro2 > .right_txtbox {
+  position: absolute;
+  left: 0;
+  top: 191px;
+}
+.intro_imgbox {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 100%;
+  height: 434px;
+  background-image: url(../img/my01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.center_txtbox > .intro_imgbox {
+  background-image: url(../img/my02.jpg);
+}
+/* //header end */
+
+.technology {
+  background-color: #dff3e3;
+}
+.technology .lines_sec,
+.technology .lines_sec2 {
+  width: 100%;
+  height: 280px;
+  background-color: #dff3e3;
+  display: flex;
+  align-items: center;
+}
+.lines_sec .line,
+.lines_sec2 .line2 {
+  width: 320px;
+  height: 100%;
+  margin-top: 13px;
+  border: 1px solid black;
+  border-bottom: none;
+}
+.css .lines_sec .line,
+.css .lines_sec2 .line2 {
+  margin-top: 0;
+  border-top:none;
+}
+
+.lines_sec2 .line2 {
+  margin-top: 0;
+  border-bottom: 1px solid #000;
+  border-top: none;
+  display: flex;
+  align-items: flex-end;
+}
+.lines_sec .line:nth-child(1),
+.lines_sec .line:nth-child(2),
+.lines_sec .line:nth-child(3),
+.lines_sec2 .line2:nth-child(1),
+.lines_sec2 .line2:nth-child(2),
+.lines_sec2 .line2:nth-child(3) {
+  border-right: none;
+}
+.lines_sec .line .ll,
+.lines_sec2 .line2 .ll2 {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #000;
+}
+.lines_sec2 .line2 .ll2 {
+  border-bottom: none;
+  border-top: 1px solid #000;
+}
+.texh_tit {
+  width: 100%;
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.js_tit {
+  width: 100%;
+  height: 780px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.texh_tit p,
+.js_tit p {
+  text-align: center;
+  font-size: 110px;
+  line-height: 125.95px;
+  letter-spacing: -4.17px;
+  font-weight: 200;
+}
+.texh_tit p span,
+.js_tit p span {
+  font-family: 'Post No Bills Jaffna';
+  font-weight: bold;
+  color:#1f352e;
+}
+.mokup {
+  display: flex;
+  flex-flow: row wrap;
+}
+.mokup_01 > .mokup_img,
+.mokup_02 > .mokup_img,
+.mokup_03 > .mokup_img,
+.mokup_04 > .mokup_img {
+  width: 50%;
+  height: 480px;
+  background-image: url(../img/web_standard_pc_mok.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #000;
+}
+.mokup_02 > .mokup_img {
+  background-image: url(../img/indigo_pc_mok.png);
+}
+.mokup_03 > .mokup_img {
+  background-image: url(../img/megabox_pc_mok.png);
+}
+.mokup_04 > .mokup_img {
+  background-image: url(../img/hollys_main_mok.png);
+}
+.mokup > .mokup_txtbox {
+  width: 50%;
+  height: 480px;
+  display: flex;
+  flex-flow: row wrap;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: none;
+}
+.mokup_tit {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  line-height: 240px;
+  border-bottom: 1px solid #000;
+}
+.mokup_tit p {
+  font-size: 80px;
+  font-family: 'Poppins';
+  font-weight: 200;
+}
+.css .mokup_tit p {
+  font-size: 70px;
+}
+.mokup_txt,
+.mokup_btn {
+  width: 50%;
+  height: 50%;
+}
+.css .mokup_txt{
+  width: 100%;
+  border-right:none;
+}
+.mokup_txt {
+  padding: 45px;
+  border-right: 1px solid black;
+}
+.mokup_txt p {
+  font-size: 20px;
+  line-height: 27px;
+  text-align: justify;
+  letter-spacing: -1px;
+}
+.mokup_btn {
+  background-color: #1f352e;
+  text-align: center;
+  line-height: 240px;
+}
+.mokup_btn a {
+  color: #fff;
+  font-family: 'Post No Bills Jaffna ExtraBold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+}
+.mline {
+  width: 100%;
+  display: flex;
+}
+.mline .mll {
+  width: 25%;
+  height: 40px;
+  border: 1px solid #000;
+  border-right: none;
+}
+.css .mline .mll{
+  border-left:none;
+}
+.css .mline .mll:first-child{
+  border-left:1px solid black;
+}
+.mline .mll:last-child {
+  border-right: 1px solid black;
+}
+.tech_last {
+  width: 100%;
+  height: 275px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border: 1px solid black;
+  border-top: none;
+}
+.tech_last .tlast {
+  width: 98%;
+  height: 35px;
+  background-color: #1f352e;
+  margin-bottom: 15px;
+}
+/* javascript sec */
+
+.js_sec {
+  background-color: #f6d2c1;
+  position: relative;
+}
+.js_sec .jline_top {
+  position: absolute;
+  left: 0;
+  top: 75px;
+}
+.js_sec .jline_top li {
+  height: 1px;
+  background-color: #000;
+}
+.js_sec .jline_top li:nth-child(1) {
+  width: 415px;
+}
+.js_sec .jline_top li:nth-child(2) {
+  width: 530px;
+  margin-top: 14px;
+}
+.js_sec .jline_top li:nth-child(3) {
+  width: 630px;
+  margin-top: 14px;
+}
+.js_sec .jline_bottom {
+  position: absolute;
+  right: 0;
+  top: 705px;
+  transform: rotate(180deg);
+}
+.js_sec .jline_bottom li {
+  height: 1px;
+  background-color: #000;
+}
+.js_sec .jline_bottom li:nth-child(1) {
+  width: 415px;
+}
+.js_sec .jline_bottom li:nth-child(2) {
+  width: 530px;
+  margin-top: 14px;
+}
+.js_sec .jline_bottom li:nth-child(3) {
+  width: 630px;
+  margin-top: 14px;
+}
+.script_wrap{
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.score{
+  float: left;
+  width: 30%;
+  height: 658px;background-color: #f6d2c1;
+  display: flex;
+  flex-flow:column nowrap;
+}
+.score li{
+  width: 100%;
+  border:1px solid black;
+}
+.score .score_top{
+  height: 45px;
+}
+.score .score_bottom{
+  height: 613px;
+  border-top:none;
+  border-bottom: none;
+}
+.js_sec .scwrap li:first-child{
+  border-top:none;
+}
+.script_sec{
+  float: left;
+  width: 70%;
+  height: 658px;
+  background-color: #1f352e;
+}
+.sript_bottom{
+  float: left;
+  width: 100%;
+  height: 42px;
+  border:1px solid black;background-color: #f6d2c1;
+}
+/* footer sec */
+.footer_wrap{
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  margin: 0 auto;
+  border:1px solid black;
+  border-top:none;
+}
+.footer_wrap li{
+  float: left;
+}
+.footer_wrap li p,
+.footer_wrap li a{
+  font-family: "Post No Bills Jaffna ExtraBold";
+  text-align: center;
+  color:#1f352e;
+  line-height: 260px;
+}
+.footer_wrap li a{
+  color:#fff;
+  font-size: 80px;
+}
+.footer_wrap>#fw01,
+.footer_wrap>#fw09{
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid black;
+}
+.footer_wrap>li#fw02,
+.footer_wrap>li#fw03{
+  font-size: 110px;
+}
+#fw02,#fw03,#fw04,#fw06,#fw07,#fw08{
+  width: 33.33333333333333%;
+  height: 260px;
+}
+#fw02,#fw03,#fw04{
+  border-bottom: 1px solid #000;
+}
+.footer_wrap #fw04,
+.footer_wrap #fw06{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f352e;
+}
+.footer_wrap>#fw05{
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid #000;
+}
+.footer_wrap>li#fw07,
+.footer_wrap>li#fw08{
+  font-size: 80px;
+}
+.footer_wrap>#fw09{
+  border-top:1px solid #000;
+  border-bottom: none;
+}

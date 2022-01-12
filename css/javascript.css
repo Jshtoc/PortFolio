@@ -1,0 +1,161 @@
+@charset 'utf-8';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* scroll */
+
+.scroll {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  z-index: 10000;
+}
+body {
+  height: 12000px;
+  background: #23222c;
+}
+#section1 {
+  height: 12000px;
+  background: #23222c;
+}
+/* //loader */
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-top: 1px solid #5b5b5b;
+  padding: 20px 30px 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 9999;
+}
+.header h1 {
+  color: #fff;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 100;
+}
+.header h1 > span {
+  display: inline-block;
+}
+.header a {
+  color: #fff;
+}
+
+/* //header */
+.bg_wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: calc(100% - 91px);
+  z-index: 1000;
+}
+.bg_wrap .bg_left {
+  position: absolute;
+  left: 0;
+  top: 91px;
+  width: 20%;
+  height: 100%;
+  display: flex;
+}
+.bg_wrap .bg_right {
+  right: 0;
+  top: 91px;
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background-color: #fff;
+}
+.bg_left .bg_leftCont {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.bg_leftCont .bg_javatit {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg_javatit h1 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid #4aa5ae;
+  border-left: none;
+  border-right: none;
+}
+.bg_javatit h1 p {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1.5px solid #4aa5ae;
+  border-bottom: 1.5px solid #4aa5ae;
+}
+.bg_javatit h1 p span {
+  letter-spacing: 2.5px;
+  font-size: 2vw;
+}
+.bg_leftCont .bg_javascore {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  left: 0;
+  top: 10%;
+  background-color: aquamarine;
+}
+.bg_leftCont .bg_pagenav {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  left: 0;
+  bottom: 0;
+  background-color: red;
+}
+/* //bg_left_wrap */
+
+.bg_right > .bg_rightcont {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.bg_rightcont .bg_scriptSec {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 90%;
+  background-color: bisque;
+}
+.bg_rightcont .bg_underbar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  background-color: blue;
+}
+/* //bg_right_wrap */
+/* //section1 */

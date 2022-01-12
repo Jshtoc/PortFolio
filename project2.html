@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정승호 PORTFOLIO</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/project.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="scroll">0</div>
+    <!-- //scroll -->
+
+    <header class="header">
+      <h1>
+        <span>J</span>
+        <span>S</span>
+        <span>H</span>
+      </h1>
+    </header>
+    <!-- //header -->
+
+    <div
+      class="next_btn"
+      data-6001="display:none"
+      data-6002="display:block;opacity:0"
+      data-6400="opacity:1"
+    >
+      <p>
+        <span>SCRIPT</span>
+      </p>
+    </div>
+    <!-- //view page btn -->
+
+    <div id="contents">
+      <section id="section1">
+        <div id="grid"></div>
+
+        <svg id="base-arrow" viewBox="0 0 122 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6 34H116M116 34L87.5 62.5M116 34L87.5 5.5"
+            stroke="white"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <div class="web_standard_wrap project">
+          <div class="project_bg">
+            <div class="row_lines">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="col_lines">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="canvas_wrap">
+            <canvas id="drawing_canvas"></canvas>
+          </div>
+          <div class="page_info_wrap">
+            <div class="project_tit">
+              <p>WEB STANDARD</p>
+            </div>
+            <div class="project_txt">
+              <p>
+                <span>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem numquam nemo
+                  quia repudiandae ab atque? Soluta neque porro quidem blanditiis quod, sequi
+                  dolores ratione qui quisquam natus incidunt itaque aperiam!
+                </span>
+              </p>
+            </div>
+          </div>
+          <!-- <div class="close_btn">
+            <img src="./img/btn_close.svg" alt="닫기" />
+          </div> -->
+        </div>
+        <div class="megabox_wrap project"></div>
+        <div class="indigo_wrap project"></div>
+        <div class="hollys_wrap project"></div>
+      </section>
+      <!-- //section1 -->
+    </div>
+    <!-- //contents -->
+
+    <footer class="footer">
+      <h2>
+        <p>
+          <span>PROJECT SITES</span>
+        </p>
+      </h2>
+      <div class="bottom_text_wrap">
+        <div class="page_num">
+          <div class="page_icon_sec">
+            <div class="page_icon"></div>
+            <div class="page_icon_num">
+              <p>
+                <span>02</span>
+              </p>
+            </div>
+          </div>
+          <div class="bottom_text_info">
+            <p>Welcome my portfolio site If you scroll down, you can see a lot of content</p>
+          </div>
+          <div class="right_page_text">
+            <div class="right_page">
+              <div class="top_right">
+                <p>
+                  <span>02</span>
+                </p>
+              </div>
+              <div class="bottom_right">
+                <p>
+                  <span>05</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page_nav">
+        <div class="page_nav_btns">
+          <div class="next_btns">
+            <p>
+              <span>INDEX6</span>
+            </p>
+            <p><span>SCRIPT</span></p>
+            <p><span>CSS</span></p>
+            <p><span>CONTACT</span></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+    <script>
+      var scrTop = $(window).scrollTop();
+      $(window).scroll(function () {
+        let scroll = $(window).scrollTop();
+        $('.scroll').text(parseInt(scroll));
+      });
+      var s = skrollr.init();
+      $('.next_btn').on('click', function () {
+        var offset = $(document).height();
+        $('html').animate({ scrollTop: offset }, 1200);
+      });
+      // $(".gel, .hex-brick").addClass("active");
+      // page 넘어가기 script
+      function pageClick() {
+        var elem = $('.next_btn p span').text();
+        document.querySelectorAll('.next_btn').forEach(elem => {
+          elem.addEventListener('click', e => {
+            e.preventDefault();
+            const hrefName = elem.innerText.toLowerCase();
+            //alert(hrefName);
+            setTimeout(() => {
+              window.location.href =
+                'http://dkdl1566.dothome.co.kr/PortFolio/' + hrefName + '.html';
+            }, 3300);
+          });
+        });
+      }
+      pageClick();
+      // 하단 메뉴
+      function pageClick2() {
+        var elem = $('.next_btns p span').text();
+        document.querySelectorAll('.next_btns p span').forEach(elem => {
+          elem.addEventListener('click', e => {
+            e.preventDefault();
+            const hrefName = elem.innerText.toLowerCase();
+            //alert(hrefName);
+            setTimeout(() => {
+              window.location.href =
+                'http://dkdl1566.dothome.co.kr/PortFolio/' + hrefName + '.html';
+            }, 3300);
+          });
+        });
+      }
+      pageClick2();
+      /**
+       * Settings
+       */
+      const baseArrow = document.getElementById('base-arrow');
+      const grid = document.getElementById('grid');
+      let arrows, arrowCenters;
+      let numArrowsX, numArrowsY;
+      const center = new THREE.Vector2();
+      const mousePos = new THREE.Vector2();
+      const PI = Math.PI;
+      let maxDist;
+
+      // Number of Arrows
+      let arrowDensity = 15;
+
+      /**
+       * Throttler Util
+       */
+      function throttle(fn) {
+        let didRequest = false;
+        return param => {
+          if (!didRequest) {
+            requestAnimationFrame(() => {
+              fn(param);
+              didRequest = false;
+            });
+            didRequest = true;
+          }
+        };
+      }
+
+      /**
+       * Map Util
+       */
+      function map(value, min1, max1, min2, max2) {
+        return ((value - min1) * (max2 - min2)) / (max1 - min1) + min2;
+      }
+
+      /**
+       * Init IFFE
+       */
+      var init = (function () {
+        window.addEventListener('resize', throttle(handleResize));
+        window.addEventListener('mousemove', throttle(handleMouseMove));
+        handleResize();
+      })();
+
+      /**
+       * Generate Arrow Grid
+       */
+      function generateArrowGrid() {
+        arrows = [];
+        arrowCenters = [];
+
+        // Create grid
+        for (let i = 0; i < numArrowsX * numArrowsY; i += 1) {
+          const newArrow = baseArrow.cloneNode(true);
+          newArrow.id = `arrow-${i}`;
+          newArrow.setAttribute('class', 'arrow');
+          grid.appendChild(newArrow);
+          arrows.push(newArrow);
+
+          // save center point for use later
+          const arrowRect = newArrow.getBoundingClientRect();
+          const arrowCenter = new THREE.Vector2(
+            arrowRect.left + newArrow.clientWidth * 0.5,
+            arrowRect.top + newArrow.clientHeight * 0.5
+          );
+          arrowCenters.push(arrowCenter);
+        }
+      }
+
+      /**
+       * Handle Mouse Mover
+       * @param {Event}
+       */
+      function handleMouseMove(event) {
+        mousePos.set(event.clientX, event.clientY);
+
+        arrows.forEach((arrow, i) => {
+          const vecToMouse = new THREE.Vector2().subVectors(mousePos, arrowCenters[i]);
+          const angle = vecToMouse.angle();
+          const dist = mousePos.distanceTo(arrowCenters[i]);
+          arrow.style.setProperty('--arrow-angle', angle);
+        });
+      }
+
+      /**
+       * Handle Resize
+       */
+      function handleResize() {
+        // recreate the grid and elements
+        const largeSide = Math.max(innerWidth, innerHeight);
+        const size = Math.round(largeSide / arrowDensity);
+
+        numArrowsX = Math.ceil(innerWidth / size);
+        numArrowsY = Math.ceil(innerHeight / size);
+        grid.style.setProperty('--num-columns', numArrowsX);
+        grid.style.setProperty('--num-rows', numArrowsY);
+        grid.innerHTML = '';
+        generateArrowGrid();
+        center.set(innerWidth * 0.5, innerHeight * 0.5);
+        maxDist = center.length() * 2;
+
+        // send a fake mouse event to trigger the initial point
+        handleMouseMove({
+          clientX: center.x,
+          clientY: center.y
+        });
+
+        // canvas settings
+        var viewWidth = 768,
+          viewHeight = 768,
+          drawingCanvas = document.getElementById('drawing_canvas'),
+          ctx,
+          timeStep = 1 / 60,
+          time = 0;
+
+        var nodes = [],
+          signals = [];
+
+        var signalCount = 0;
+
+        window.onload = function () {
+          initDrawingCanvas();
+          createNodes();
+          connectNodes();
+
+          transmit();
+          setInterval(transmit, 1500);
+
+          requestAnimationFrame(loop);
+        };
+
+        function initDrawingCanvas() {
+          drawingCanvas.width = viewWidth;
+          drawingCanvas.height = viewHeight;
+          ctx = drawingCanvas.getContext('2d');
+        }
+
+        function createNodes() {
+          var rad = viewWidth * 0.5 - 10;
+
+          for (var i = 0; i < 300; i++) {
+            var q = Math.random() * (Math.PI * 2);
+            var r = Math.sqrt(Math.random());
+            var x = rad * r * Math.cos(q) + viewWidth * 0.5;
+            var y = rad * r * Math.sin(q) + viewWidth * 0.5;
+
+            nodes[i] = new Node(x, y);
+          }
+        }
+
+        function connectNodes() {
+          var connection, j, connectCount;
+
+          for (var i = 0; i < nodes.length; i++) {
+            j = 0;
+
+            connectCount = Math.floor(randomRange(3, 6));
+
+            while (j < connectCount) {
+              connection = getRandom(nodes);
+
+              if (nodes[i] !== connection) {
+                nodes[i].connections.push(connection);
+                j++;
+              }
+            }
+          }
+        }
+
+        function transmit() {
+          signals.push(new Signal(getRandom(nodes)));
+          signalCount++;
+        }
+
+        function update() {
+          nodes.forEach(function (n) {
+            n.update();
+          });
+
+          signals.forEach(function (s) {
+            if (s.update() === true) {
+              signals.splice(signals.indexOf(s), 1);
+            }
+          });
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, viewWidth, viewHeight);
+
+          nodes.forEach(function (n) {
+            n.draw();
+          });
+
+          signals.forEach(function (s) {
+            s.draw();
+          });
+        }
+
+        function loop() {
+          update();
+          draw();
+          time += timeStep;
+          requestAnimationFrame(loop);
+        }
+
+        function Node(x, y) {
+          this.x = this._x = x;
+          this.y = this._y = y;
+
+          this.connections = [];
+
+          this.r = randomRange(-10, 10);
+        }
+        Node.prototype = {
+          update: function () {
+            this.x = this._x + Math.sin(time) * this.r;
+            this.y = this._y + Math.cos(time) * this.r;
+          },
+          draw: function () {
+            ctx.strokeStyle = '#fff';
+            ctx.fillStyle = '#fff';
+            ctx.lineWidth = 0.05;
+
+            ctx.fillRect(this.x, this.y, 1, 1);
+
+            for (var i = 0; i < this.connections.length; i++) {
+              ctx.beginPath();
+              ctx.moveTo(this.x, this.y);
+              ctx.lineTo(this.connections[i].x, this.connections[i].y);
+              ctx.stroke();
+            }
+          }
+        };
+
+        function Signal(start) {
+          this.start = start;
+          this.parts = [];
+          this.completeParts = [];
+          this.strength = 4.0;
+          this.jumps = 0;
+
+          var tint = (signalCount % 12) * 30;
+          // var tint = Math.floor(Math.random() * 360);
+          this.style = 'hsl(' + tint + ',100%,50%)';
+
+          for (var i = 0; i < start.connections.length; i++) {
+            this.parts.push(
+              new SignalPart(this.start, this.start.connections[i], this.strength, this.style)
+            );
+          }
+        }
+        Signal.prototype = {
+          update: function () {
+            var complete = false;
+            this.completeParts.length = 0;
+
+            for (var i = this.parts.length - 1; i >= 0; i--) {
+              this.parts[i].time += timeStep;
+
+              if (this.parts[i].complete) {
+                this.completeParts.push(this.parts.splice(i, 1)[0]);
+              }
+            }
+
+            if (this.completeParts.length > 0) {
+              this.jumps++;
+              this.strength--;
+              complete = this.jumps === 3;
+            }
+
+            if (complete === false) {
+              var part, end, connection;
+
+              for (var j = 0; j < this.completeParts.length; j++) {
+                part = this.completeParts[j];
+                end = part.end;
+
+                for (var k = 0; k < end.connections.length; k++) {
+                  connection = end.connections[k];
+
+                  this.parts.push(new SignalPart(end, connection, this.strength, this.style));
+                }
+              }
+            }
+
+            return complete;
+          },
+          draw: function () {
+            for (var i = 0; i < this.parts.length; i++) {
+              this.parts[i].draw();
+            }
+          }
+        };
+
+        function SignalPart(start, end, strength, style) {
+          this.start = start;
+          this.end = end;
+          this.strength = strength;
+          this.style = style;
+          this._time = 0;
+          this.prevTime = 0;
+          this.duration = 2;
+          this.complete = false;
+
+          this.p0 = { x: 0, y: 0 };
+          this.p1 = { x: 0, y: 0 };
+        }
+        SignalPart.prototype = {
+          set time(v) {
+            this.prevTime = this._time;
+            this._time = v >= this.duration ? this.duration : v;
+            this.complete = this._time === this.duration;
+          },
+          get time() {
+            return this._time;
+          },
+          draw: function () {
+            var t0 = Ease.outCubic(this.prevTime, 0, 1, this.duration);
+            var t1 = Ease.outQuad(this.time, 0, 1, this.duration);
+            lerp(this.start, this.end, t0, this.p0);
+            lerp(this.start, this.end, t1, this.p1);
+
+            ctx.strokeStyle = this.style;
+            ctx.lineWidth = this.strength * 0.25;
+            ctx.lineCap = 'round';
+            ctx.beginPath();
+            ctx.moveTo(this.p0.x, this.p0.y);
+            ctx.lineTo(this.p1.x, this.p1.y);
+            ctx.stroke();
+          }
+        };
+
+        function randomRange(min, max) {
+          return min + Math.random() * (max - min);
+        }
+
+        function getRandom(a) {
+          return a[Math.floor(Math.random() * a.length)];
+        }
+
+        function lerp(n1, n2, t, p) {
+          p = p || { x: 0, y: 0 };
+
+          p.x = n1.x + t * (n2.x - n1.x);
+          p.y = n1.y + t * (n2.y - n1.y);
+
+          return p;
+        }
+
+        /**
+         * easing equations from http://gizma.com/easing/
+         * t = current time
+         * b = start value
+         * c = delta value
+         * d = duration
+         */
+        var Ease = {
+          inCubic: function (t, b, c, d) {
+            t /= d;
+            return c * t * t * t + b;
+          },
+          outCubic: function (t, b, c, d) {
+            t /= d;
+            t--;
+            return c * (t * t * t + 1) + b;
+          },
+          inQuad: function (t, b, c, d) {
+            return c * (t /= d) * t + b;
+          },
+          outQuad: function (t, b, c, d) {
+            return -c * (t /= d) * (t - 2) + b;
+          },
+          inOutCubic: function (t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return (c / 2) * t * t * t + b;
+            t -= 2;
+            return (c / 2) * (t * t * t + 2) + b;
+          }
+        };
+
+        // page click
+        $('.web_standard_wrap').click(function () {
+          $('.web_standard_wrap').addClass('active');
+          $('#drawing_canvas').css({ visibility: 'visible' });
+          $('.project_bg, .page_info_wrap').css({ opacity: '1' });
+        });
+
+        // $('.close_btn').on('click', function () {
+        //   $('.web_standard_wrap').removeClass('active');
+        // });
+      }
+    </script>
+  </body>
+</html>

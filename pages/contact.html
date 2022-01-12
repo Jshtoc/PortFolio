@@ -1,0 +1,282 @@
+<?php
+  include '../connect/session.php';
+  include '../connect/connect.php';
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정승호 PORTFOLIO</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style4.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="scroll">0</div>
+    <!-- //scroll -->
+
+    <div id="loader" class="loader_active">
+      <div class="container">
+        <div class="scene">
+          <div class="cubes1">
+            <div class="cube1">
+              <div class="face face--front">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--back">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--left">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--right">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--top">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+              <div class="face face--bottom">
+                <div class="face__wrap">
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                  <div class="face__panel"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //loader -->
+
+    <!-- header -->
+    <?php
+          include '../component/header.php';
+      ?>
+    <!-- //header -->
+
+    <section class="section1">
+      <div class="container">
+        <div class="tit">
+          <p>
+            <span data-500="top:100%;" data-800="top:0%;">T</span>
+            <span data-700="top:100%;" data-1000="top:0%;">H</span>
+            <span data-900="top:100%;" data-1200="top:0%;">A</span>
+            <span data-1100="top:100%;" data-1400="top:0%;">N</span>
+            <span data-1300="top:100%;" data-1600="top:0%;">K</span>
+            <span data-1500="top:100%;" data-1800="top:0%;">S</span>
+            <span class="tit_line" data-0="width:0%" data-3000="width:100%"> </span>
+          </p>
+        </div>
+        <div class="my_info">
+          <div class="my_info_wrap">
+            <div class="name" data-3000="right:-100%" data-3400="right:0%">
+              <p>JEUNG SEUNG HO</p>
+            </div>
+            <div class="phone" data-3200="right:-100%" data-3600="right:0%">
+              <p>010 9105 0069</p>
+            </div>
+            <div class="e_mail" data-3400="right:-100%" data-3800="right:0%">
+              <p>
+                <a href="mailto:wjdtmdgh94@naver.com" style="color: #fff">wjdtmdgh94@naver.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <?php
+      include '../component/footer.php';
+    ?>
+    <!-- //footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.0/gsap.min.js"></script>
+    <script>
+      $(function () {
+        setTimeout(() => {
+          $('#loader').removeClass('loader_active');
+          $('.header,.footer,.cube_sec,.next_btn').removeClass('hide');
+        }, 1000);
+      });
+      var scrTop = $(window).scrollTop();
+      $(window).scroll(function () {
+        let scroll = $(window).scrollTop();
+        $('.scroll').text(parseInt(scroll));
+      });
+      var s = skrollr.init();
+      $('.next_btn').on('click', function () {
+        var offset = $(document).height();
+        $('html').animate({ scrollTop: offset }, 1200);
+      });
+      // $(".gel, .hex-brick").addClass("active");
+      // page 넘어가기 script
+      function pageClick() {
+        var elem = $('.next_btn p span').text();
+        document.querySelectorAll('.next_btn,.next_btns p span').forEach(elem => {
+          elem.addEventListener('click', e => {
+            e.preventDefault();
+            const hrefName = elem.innerText.toLowerCase();
+            //alert(hrefName);
+            // document.getElementById('loader').style.visibility = 'visible';
+            document.getElementById('loader').classList.add('loader_active');
+
+            $('.header,.footer,.cube_sec,.view_page_btn_wrap').addClass('hide');
+            setTimeout(() => {
+              document.getElementById('loader').classList.add('loader_active');
+              window.location.href =
+                'http://dkdl1566.dothome.co.kr/PortFolio/pages/' + hrefName + '.html';
+            }, 1800);
+          });
+        });
+      }
+      pageClick();
+      // 하단 메뉴
+
+      // loader
+      select = e => document.querySelector(e);
+      selectAll = e => document.querySelectorAll(e);
+
+      let getDocProp = gsap.getProperty(':root'),
+        midCol = getDocProp('--mid-color'),
+        outCol = getDocProp('--out-color'),
+        faceDuration = 0.5,
+        staggerOffset = 0.1,
+        easing = 'sine.inOut',
+        gtl = gsap.timeline({ repeat: -1, delay: 0.5 });
+
+      gsap.set('.container', { autoAlpha: 1 });
+
+      function facesIn() {
+        let tl = gsap
+          .timeline({
+            defaults: {
+              scaleY: 1,
+              opacity: 0.9,
+              backgroundColor: midCol,
+              transformOrigin: 'center bottom',
+              duration: faceDuration,
+              ease: easing,
+              stagger: {
+                each: staggerOffset
+              }
+            }
+          })
+          .to('.face--back .face__panel', {})
+          .to('.face--right .face__panel', {}, 0)
+          .to('.face--bottom .face__panel', {}, 0)
+          .to('.face--top .face__panel', {}, 0.3)
+          .to('.face--left .face__panel', {}, 0.3)
+          .to('.face--front .face__panel', {}, 0.3);
+
+        return tl;
+      }
+
+      function facesOut() {
+        let tl = gsap
+          .timeline({
+            defaults: {
+              scaleY: 0,
+              opacity: 0,
+              backgroundColor: outCol,
+              transformOrigin: 'center top',
+              duration: faceDuration,
+              ease: easing,
+              stagger: {
+                each: staggerOffset
+              }
+            }
+          })
+          .to('.face--top .face__panel', {})
+          .to('.face--left .face__panel', {}, 0)
+          .to('.face--front .face__panel', {}, 0)
+          .to('.face--back .face__panel', {}, 0.3)
+          .to('.face--right .face__panel', {}, 0.3)
+          .to('.face--bottom .face__panel', {}, 0.3);
+
+        return tl;
+      }
+
+      gtl.add(facesIn()).add(facesOut(), '-=0.3').timeScale(1.1);
+
+      // 배경음악
+      var audio = new Audio('../audio/bg_music.mp3');
+
+      /*추가된 부분: 종료되면 처음부터 다시 재생*/
+      audio.addEventListener(
+        'ended',
+        function () {
+          this.currentTime = 0;
+          this.play();
+        },
+        false
+      );
+
+      $('.helix').on('click', function () {
+        var audioPlayer = $('.helix').attr('onclick');
+        if (audioPlayer == 'audio.pause()') {
+          $('.helix').removeClass('stop_bg');
+          audio.play();
+          $('.helix').attr('onclick', 'audio.play()');
+        } else {
+          $('.helix').addClass('stop_bg');
+          audio.pause();
+          $('.helix').attr('onclick', 'audio.pause()');
+        }
+      });
+    </script>
+  </body>
+</html>
